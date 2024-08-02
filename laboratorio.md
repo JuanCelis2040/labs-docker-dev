@@ -52,5 +52,19 @@
 # @JuanCelis2040 ➜ /workspaces/labs-docker-dev (main) $ docker run -d -p 8000:80 httpd
 # fb1f2c426da9dbeb8458675370cecd2871b6584b7596335aba86635f99e87838
 
+## 3.1. Elimina el contenedor de Ubuntu que creaste en el ejercicio 2.1
+
+# docker ps -a
+# CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                     PORTS                                           NAMES
+# fb1f2c426da9   httpd     "httpd-foreground"       3 minutes ago    Up 3 minutes               0.0.0.0:8000->80/tcp, :::8000->80/tcp           vibrant_mcclintock
+# bd76bff4daf3   ubuntu    "bash"                   15 minutes ago   Exited (0) 8 minutes ago                                                   pedantic_goodall
+# 6d009cadaad6   nginx     "/docker-entrypoint.…"   16 minutes ago   Up 16 minutes              80/tcp, 0.0.0.0:8001->81/tcp, :::8001->81/tcp   cool_swanson
+# a7c88c067d49   nginx     "/docker-entrypoint.…"   16 minutes ago   Created                                                                    great_chaplygin
+# 3b8973a0da93   nginx     "/docker-entrypoint.…"   17 minutes ago   Created                                                                    eloquent_mclean
+# 206f84881faa   nginx     "/docker-entrypoint.…"   17 minutes ago   Up 17 minutes              0.0.0.0:8080->80/tcp, :::8080->80/tcp           vibrant_northcutt
+# @JuanCelis2040 ➜ /workspaces/labs-docker-dev (main) $ docker rm bd76bff4daf3
+# bd76bff4daf3
+
+
 
 
