@@ -71,3 +71,27 @@ CMD ["nginx", "-g", "daemon off;"]
 @JuanCelis2040 ➜ /workspaces/labs-docker-dev (main) $ docker run -d -p 80:80 my-nginx:latest                                                            
 24424617c94cd99f830ed267b2304d49bc414a4bf2b3725d22ee3737afd73f3f
 @JuanCelis2040 ➜ /workspaces/labs-docker-dev (main) $ 
+
+## Ejercicio 5: Modificar el Dockerfile de Nginx para exponer el puerto 80
+@JuanCelis2040 ➜ /workspaces/labs-docker-dev (main) $ nano Dockerfile
+
+## Archivo Dockerfile
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y nginx
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+@JuanCelis2040 ➜ /workspaces/labs-docker-dev (main) $ docker build -t my-nginx:latest .
+[+] Building 0.6s (6/6) FINISHED                             docker:default
+ => [internal] load build definition from Dockerfile                   0.1s
+ => => transferring dockerfile: 150B                                   0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest       0.0s
+ => [internal] load .dockerignore                                      0.1s
+ => => transferring context: 2B                                        0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest                         0.0s
+ => CACHED [2/2] RUN apt-get update && apt-get install -y nginx        0.0s
+ => exporting to image                                                 0.1s
+ => => exporting layers                                                0.0s
+ => => writing image sha256:eb43d236e2d85af13d3a5c19c6ed4277854aaf6db  0.0s
+ => => naming to docker.io/library/my-nginx:latest                     0.0s
+
