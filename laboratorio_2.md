@@ -111,4 +111,10 @@ WORKDIR /app
 COPY myfile.txt .
 
 
-##
+## Ejercicio 3: Ejecutar un script Python al iniciar el contenedor
+@JuanCelis2040 ➜ /workspaces/labs-docker-dev (main) $ nano Dockerfile
+# Archivo Dockerfile
+FROM python:3.9
+WORKDIR /app
+COPY script.py .
+CMD ["python", "script.py"]
