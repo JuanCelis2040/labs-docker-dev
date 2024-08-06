@@ -95,3 +95,12 @@ CMD ["nginx", "-g", "daemon off;"]
  => => writing image sha256:eb43d236e2d85af13d3a5c19c6ed4277854aaf6db  0.0s
  => => naming to docker.io/library/my-nginx:latest                     0.0s
 
+ ## Tema 2
+ # Ejercicio 1: Copiar un archivo HTML local a una imagen de Nginx
+
+ @JuanCelis2040 ➜ /workspaces/labs-docker-dev (main) $ nano Dockerfile
+ # Archivo Docerkfile
+ FROM nginx:latest
+COPY index.html /usr/share/nginx/html/
+
+
