@@ -103,4 +103,12 @@ CMD ["nginx", "-g", "daemon off;"]
  FROM nginx:latest
 COPY index.html /usr/share/nginx/html/
 
+## Ejercicio 2: Usar WORKDIR y copiar un archivo
+@JuanCelis2040 ➜ /workspaces/labs-docker-dev (main) $ nano Dockerfile
+# Archivo Dockerfile
+FROM ubuntu:latest
+WORKDIR /app
+COPY myfile.txt .
 
+
+##
